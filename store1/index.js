@@ -4,7 +4,17 @@ var store1 = require('./store1-data.js');
 
 // Return the value '4.63' from store1
 function accessesingData1() {
-
+ for (let prop in store1)
+    if ( store1[prop[1]] === '4.63') {
+      return store1[prop];
+    }
+   // for ( i = 0; i < 3; i++) {
+   //    if (prop[1] === '4.63') {
+   //      return '4.63';
+   //    } else {
+   //      return '0';
+      }
+   }
 }
 
 // Return how many 'Mint Wafers' were sold on January 6th
