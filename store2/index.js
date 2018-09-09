@@ -62,16 +62,21 @@ function loopingData1() {
 
 // Iterate over store2's sale dates data to find which day had the most total number of sales. Return the date with the most sales.
 function loopingData2() {
- let highSaleCount = 0
- let candySaleDates = store2['sale dates']
+  let candySaleDate = loopingData1()
+  let highSaleCount = 0
+  let dateMostSales
 
- for (var key in candySaleDates) {
-   candySaleDates
- }
-
-
- return dateMostSales
+  for (let key in candySaleDate) {
+    let totalSale = candySaleDate[key]
+    if (totalSale > highSaleCount) {
+      highSaleCount = totalSale
+      dateMostSales = key
+    }
+  }
+  console.log('date most sales', dateMostSales)
+  return dateMostSales
 }
+
 
 /////////// CHALLENGE ///////////
 
